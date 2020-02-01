@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@tensorflow/tfjs-node": "^1.5.2",
-    "mathjs": "^6.5.0"
+    "mathjs": "^6.5.0",
+    "python-shell": "^1.0.8"
   }
 }
