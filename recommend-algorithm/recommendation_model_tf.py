@@ -1,7 +1,7 @@
 import tensorflow as tf
 
 
-class Model:
+class RecommendModel:
     def __init__(self, rated_matrix, nf=200, alpha=40):
         self.nu = rated_matrix.shape[0]
         self.ni = rated_matrix.shape[1]
@@ -18,7 +18,7 @@ class Model:
         for i in range(self.nu):
             self.P[i].assign(tf.map_fn(lambda x: 1 if x > 0 else x, self.P[i]))
 
-    def loss_function(self, r_lambda=40):
+    def loss(self, r_lambda=40):
         self.lambda_var = r_lambda
         predict = self.predict()
         predicted_error = tf.reduce_sum(self.C * tf.square(self.P - predict))
@@ -57,7 +57,7 @@ class Model:
         predict_errors, regularization_list, total_losses = [], [], []
         for i in range(epoch):
             self.train_one_step()
-            predict_error, regularization, total_loss = self.loss_function()
+            predict_error, regularization, total_loss = self.loss()
 
             predict_errors.append(predict_error)
             regularization_list.append(regularization)
