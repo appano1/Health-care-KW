@@ -1,6 +1,6 @@
 import numpy as np
 from datetime import datetime
-import recommendation_model as recommend
+import recommendation_model_np as rm
 import matplotlib.pyplot as plt
 import os
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
@@ -18,7 +18,7 @@ u10 = np.array([0, 0, 0, 3, 0, 0, 0, 0, 4, 5, 0])
 
 R = np.array([u1, u2, u3, u4, u5, u6, u7, u8, u9, u10], dtype=np.float32)
 
-model = recommend.Model(R)
+model = rm.RecommendModel(R)
 
 t1 = datetime.now()
 predicts, regularization, losses = model.train()
@@ -37,9 +37,6 @@ plt.xlabel('Loss')
 plt.show()
 
 '''
-Using tf.function
-Duration :  0:00:07.293554
-
-Not using tf.function
-Duration :  0:00:24.533779
+Using np => Duration :  0:00:00.235455
+Using tf => Duration :  0:00:07.405049
 '''
