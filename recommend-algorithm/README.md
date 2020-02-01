@@ -3,5 +3,4 @@
 Collaborative Filtering for Implicit Feedback Datasets 해당 논문을 참고하여 코드를 작성했습니다.
 (http://yifanhu.net/PUB/cf.pdf)
 
-# 환경
-Tensorflow 2.0 / Pycharm
+개발 환경 : Tensorflow 2.0 / Pycharm
