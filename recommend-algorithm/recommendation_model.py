@@ -24,7 +24,7 @@ class Model:
         predicted_error = tf.reduce_sum(self.C * tf.square(self.P - predict))
         regularization = r_lambda * (tf.reduce_sum(tf.square(self.X)) + tf.reduce_sum(tf.square(self.Y)))
         total_loss = predicted_error + regularization
-        return tf.reduce_sum(predicted_error), regularization, total_loss
+        return predicted_error, regularization, total_loss
 
     def optimize_user(self):
         yT = tf.transpose(self.Y)
