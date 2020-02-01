@@ -62,7 +62,7 @@ class RecommendModel:
             regularization_list.append(regularization)
             total_losses.append(total_loss)
 
-            print('------------------------step %d----------------------' % i)
+            print('------------------------step %d----------------------' % (i+1))
             print('predict error: %f' % predict_error)
             print('regularization: %f' % regularization)
             print('total loss: %f' % total_loss)
