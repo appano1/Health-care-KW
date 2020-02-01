@@ -29,9 +29,9 @@ class RecommendModel {
         });
     }
 
-    loss() {
-        const predicted = this.predict();
-    }
+    // loss() {
+    //     const predicted = this.predict();
+    // }
 
     optimize_user() {
         const yT = math.transpose(this.Y);
