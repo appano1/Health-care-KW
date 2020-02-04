@@ -62,11 +62,15 @@ class RecommendModel:
             regularization_list.append(regularization)
             total_losses.append(total_loss)
 
-            print('------------------------step %d----------------------' % (i+1))
-            print('predict error: %f' % predict_error)
-            print('regularization: %f' % regularization)
-            print('total loss: %f' % total_loss)
+            # print('------------------------step %d----------------------' % (i+1))
+            # print('predict error: %f' % predict_error)
+            # print('regularization: %f' % regularization)
+            # print('total loss: %f' % total_loss)
         return predict_errors, regularization_list, total_losses
 
-    def predict(self):
-        return np.matmul(self.X, np.transpose(self.Y))
+    def predict(self, user_n=-1):
+        result = np.matmul(self.X, np.transpose(self.Y))
+        if user_n == -1:
+            return result
+        else:
+            return result[user_n]
