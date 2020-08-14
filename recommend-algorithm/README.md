@@ -1,7 +1,6 @@
 # 추천 알고리즘 : Collaborative Filtering
 
-Collaborative Filtering for Implicit Feedback Datasets 해당 논문을 참고하여 코드를 작성했습니다.
-(http://yifanhu.net/PUB/cf.pdf)
+[Collaborative Filtering for Implicit Feedback Datasets](http://yifanhu.net/PUB/cf.pdf) 해당 논문을 참고하여 코드를 작성했습니다.
 
 #### 각 모듈을 이용해서 구현한 결과 소요된 시간
 
