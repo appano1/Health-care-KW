@@ -1,7 +1,2 @@
-
-*.iml
-*.xml
-recommend-algorithm/tf_test.py
-/recommend-algorithm/Node/node_modules/
-*.pyc
-recommend-algorithm/Node/package-lock.json
+js/node_modules/
+python/__pycache__
